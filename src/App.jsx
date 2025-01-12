@@ -42,14 +42,14 @@ const totlaPrice = () => {
   return (
     <>
     <nav className="px-20 grid grid-cols-8 gap-6 static bg-blue-400 drop-shadow-xl">
-      <img src="new logo.png"></img>
+      <img src="https://i.pinimg.com/originals/b1/77/8e/b1778e6d48e11fcd2e5d0cc94b5a9f7c.png"></img>
       <a href="#" className="py-10 px-14 text-2xl">Home</a>
       <a href="#" className="py-10 px-14 text-2xl">About</a>
       <a href="#" className="py-10 px-14 text-2xl">Contact</a>
       <a href="#" className="py-10 px-14 text-2xl">Product</a>
       <a href="#" className="py-10 px-14 text-2xl">Catogery</a>
       <button onClick={()=>setshowBox(true)}>
-      <img src="cart icon.png" className="mx-44 my-4 h-20"></img>
+      <img src="https://cdn-icons-png.flaticon.com/512/3081/3081986.png" className="mx-44 my-4 h-20"></img>
       </button>
       <div className="bg-red-500 rounded-full text-center h-8 w-3/12 my-8 mx-20 text-xl">{counter}</div>
       </nav>
