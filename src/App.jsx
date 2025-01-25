@@ -10,7 +10,7 @@ function App() {
 
   const fetchData = async () => {
     let response = await fetch(
-      "https://6461c1c2491f9402f4aa0565.mockapi.io/products"
+      "https://fakestoreapi.com/products?sort=desc"
     );
     const data = await response.json();
     setProducts(data);
@@ -53,7 +53,7 @@ const totlaPrice = () => {
       </button>
       <div className="bg-red-500 rounded-full text-center h-8 w-3/12 my-8 mx-20 text-xl">{counter}</div>
       </nav>
-    <div className="flex h-screen bg-white">
+    <div className="flex h-screen bg-blue-100">
       <div className="w-full p-6 overflow-y-auto">
         <div className="grid grid-cols-4 gap-6">
           {products.map((product) => {
@@ -62,11 +62,10 @@ const totlaPrice = () => {
               <div key={product.id} className="p-4 bg-white rounded-lg shadow-md">
                 <img
                   className="object-cover w-full h-48 rounded-md"
-                  src={`https://picsum.photos/seed/${product.avatar}/200/300`}
-                  alt={product.name}
+                  src={product.image}
                 />
                 <h3 className="text-black text-lg font-semibold">
-                  {product.name}
+                  {product.category}
                 </h3>
                 <p className="text-gray-600">Rs.{product.price}</p>
                 <button
@@ -95,11 +94,11 @@ const totlaPrice = () => {
                 <div key={product.id} className="p-4 bg-blue-500 shadow-md mb-4">
                 <img
                   className="h-32 w-3/12"
-                  src={`https://picsum.photos/seed/${product.avatar}/200/300`}
+                  src={product.image}
                   alt={product.name}
                 />
                 <h3 className="px-44 relative bottom-28 text-2xl">
-                  {product.name}
+                  {product.category}
                 </h3>
                 <p className="px-44 relative bottom-16 text-xl">
                   Rs.{product.price}
